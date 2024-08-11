@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ktlint.kotlin.android)
+    alias(libs.plugins.kover.kotlin)
 }
 
 android {
