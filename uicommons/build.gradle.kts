@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ktlint.kotlin.android)
     alias(libs.plugins.kover.kotlin)
+    id("com.android.library")
 }
 
 android {
@@ -31,6 +31,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
 }
 tasks.getByPath("preBuild").dependsOn("ktlintFormat")
 
@@ -39,6 +45,8 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     testImplementation(libs.junit)
     implementation(libs.androidx.ui.material3)
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
