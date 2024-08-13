@@ -1,6 +1,8 @@
 plugins {
+    alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ktlint.kotlin.android)
+    alias(libs.plugins.kover.kotlin)
 }
 
 android {
@@ -11,7 +13,6 @@ android {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -37,7 +38,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     testImplementation(libs.junit)
-    implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui.material3)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
