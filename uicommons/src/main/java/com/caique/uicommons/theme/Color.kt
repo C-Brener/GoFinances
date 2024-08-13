@@ -1,4 +1,4 @@
-package com.caique.gofinances.ui.theme
+package com.caique.uicommons.theme
 
 import androidx.compose.ui.graphics.Color
 

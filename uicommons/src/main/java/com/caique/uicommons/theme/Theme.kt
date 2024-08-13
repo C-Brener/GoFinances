@@ -1,4 +1,4 @@
-package com.caique.gofinances.ui.theme
+package com.caique.uicommons.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
