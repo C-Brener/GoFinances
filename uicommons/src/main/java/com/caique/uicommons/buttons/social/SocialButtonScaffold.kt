@@ -26,9 +26,9 @@ import com.caique.uicommons.theme.GoFinancesTheme
 import com.caique.uicommons.theme.background
 import com.caique.uicommons.theme.button_radius
 import com.caique.uicommons.theme.button_size
+import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.heading
 import com.caique.uicommons.theme.shape
-import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.spacing_medium
 import com.caique.uicommons.theme.thin_size
 
@@ -76,6 +76,6 @@ fun SocialButtonScaffold(
 @Composable
 private fun SocialButtonScaffoldPreview() {
     GoFinancesTheme {
-        SocialButtonScaffold(title = "Entrar com Google", icon = R.drawable.google_logo){}
+        SocialButtonScaffold(title = "Entrar com Google", icon = R.drawable.google_logo) {}
     }
 }
