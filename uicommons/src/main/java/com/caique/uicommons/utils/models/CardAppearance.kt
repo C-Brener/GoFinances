@@ -7,4 +7,3 @@ data class CardAppearance(
     val textColor: Color,
     val iconRes: Int
 )
-

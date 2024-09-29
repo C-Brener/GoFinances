@@ -21,14 +21,17 @@ import com.caique.uicommons.theme.GoFinancesTheme
 import com.caique.uicommons.theme.font_size_heading
 import com.caique.uicommons.theme.font_size_text
 import com.caique.uicommons.theme.font_size_title
+import com.caique.uicommons.theme.space_thirty_two
+import com.caique.uicommons.theme.space_twenty
 import com.caique.uicommons.utils.extensions.getAppearance
 import com.caique.uicommons.utils.extensions.handleColorResource
 
 @Composable
 fun FinanceCard(
     modifier: Modifier = Modifier,
-    title:String,
-    dateOfLastResult:String,
+    title: String,
+    financialValue: String,
+    dateOfLastResult: String,
     cardType: FinanceCardType
 ) {
     val appearance = cardType.getAppearance()
@@ -36,7 +39,7 @@ fun FinanceCard(
         modifier = modifier,
         colors = CardDefaults.cardColors().copy(containerColor = appearance.backgroundColor)
     ) {
-        Column(modifier = Modifier.padding(20.dp)) {
+        Column(modifier = Modifier.padding(space_twenty)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
@@ -54,9 +57,9 @@ fun FinanceCard(
                     contentDescription = cardType.name
                 )
             }
-            Column(modifier = Modifier.padding(vertical = 32.dp)) {
+            Column(modifier = Modifier.padding(vertical = space_thirty_two)) {
                 Text(
-                    text = "R$ 17.400,00",
+                    text = financialValue,
                     textAlign = TextAlign.Center,
                     fontSize = font_size_heading,
                     fontWeight = FontWeight.Medium,
@@ -74,15 +77,29 @@ fun FinanceCard(
     }
 }
 
-
-@Preview
+@Preview(showSystemUi = true)
 @Composable
 private fun FinanceCardPreview() {
     GoFinancesTheme {
         Column(verticalArrangement = Arrangement.spacedBy(15.dp)) {
-            FinanceCard(title = "Entrada", dateOfLastResult = "Ultima entrada dia 13 de abril", cardType = FinanceCardType.INCOME)
-            FinanceCard(title = "Saida", dateOfLastResult = "Ultima saida dia 13 de abril",cardType = FinanceCardType.OUTCOME)
-            FinanceCard(title = "Total", dateOfLastResult = "01 à 16 de abril",cardType = FinanceCardType.TOTAL)
+            FinanceCard(
+                title = "Entrada",
+                financialValue = "R$ 17.400,00",
+                dateOfLastResult = "Ultima entrada dia 13 de abril",
+                cardType = FinanceCardType.INCOME
+            )
+            FinanceCard(
+                title = "Saida",
+                financialValue = "R$ 17.400,00",
+                dateOfLastResult = "Ultima saida dia 13 de abril",
+                cardType = FinanceCardType.OUTCOME
+            )
+            FinanceCard(
+                title = "Total",
+                financialValue = "R$ 17.400,00",
+                dateOfLastResult = "01 à 16 de abril",
+                cardType = FinanceCardType.TOTAL
+            )
         }
     }
 }
