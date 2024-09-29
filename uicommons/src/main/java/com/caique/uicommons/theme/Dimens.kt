@@ -9,7 +9,9 @@ val font_size_text = 12.sp
 val font_size_heading = 32.sp
 
 // Spacing
-val spacing_medium = 16.dp
+val space_thirty_two = 32.dp
+val space_twenty = 20.dp
+val spacing_sixteen = 16.dp
 val thin_size = 1.dp
 
 // Radius
