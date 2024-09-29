@@ -83,21 +83,21 @@ private fun FinanceCardPreview() {
     GoFinancesTheme {
         Column(verticalArrangement = Arrangement.spacedBy(15.dp)) {
             FinanceCard(
-                title = "Entrada",
+                title = "Income",
                 financialValue = "R$ 17.400,00",
-                dateOfLastResult = "Ultima entrada dia 13 de abril",
+                dateOfLastResult = "Last entry on April 13th",
                 cardType = FinanceCardType.INCOME
             )
             FinanceCard(
-                title = "Saida",
+                title = "Outcome",
                 financialValue = "R$ 17.400,00",
-                dateOfLastResult = "Ultima saida dia 13 de abril",
+                dateOfLastResult = "Last outing on April 13th",
                 cardType = FinanceCardType.OUTCOME
             )
             FinanceCard(
                 title = "Total",
                 financialValue = "R$ 17.400,00",
-                dateOfLastResult = "01 à 16 de abril",
+                dateOfLastResult = "April 01 to 16",
                 cardType = FinanceCardType.TOTAL
             )
         }
