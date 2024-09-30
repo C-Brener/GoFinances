@@ -27,12 +27,12 @@ import com.caique.uicommons.utils.extensions.getAppearance
 import com.caique.uicommons.utils.extensions.handleColorResource
 
 @Composable
-fun FinanceCard(
+fun SummaryFinanceCard(
     modifier: Modifier = Modifier,
     title: String,
     financialValue: String,
     dateOfLastResult: String,
-    cardType: FinanceCardType
+    cardType: SummaryFinanceCardType
 ) {
     val appearance = cardType.getAppearance()
     Card(
@@ -79,26 +79,26 @@ fun FinanceCard(
 
 @Preview(showSystemUi = true)
 @Composable
-private fun FinanceCardPreview() {
+private fun SummaryFinanceCardPreview() {
     GoFinancesTheme {
         Column(verticalArrangement = Arrangement.spacedBy(15.dp)) {
-            FinanceCard(
+            SummaryFinanceCard(
                 title = "Income",
                 financialValue = "R$ 17.400,00",
                 dateOfLastResult = "Last entry on April 13th",
-                cardType = FinanceCardType.INCOME
+                cardType = SummaryFinanceCardType.INCOME
             )
-            FinanceCard(
+            SummaryFinanceCard(
                 title = "Outcome",
                 financialValue = "R$ 17.400,00",
                 dateOfLastResult = "Last outing on April 13th",
-                cardType = FinanceCardType.OUTCOME
+                cardType = SummaryFinanceCardType.OUTCOME
             )
-            FinanceCard(
+            SummaryFinanceCard(
                 title = "Total",
                 financialValue = "R$ 17.400,00",
                 dateOfLastResult = "April 01 to 16",
-                cardType = FinanceCardType.TOTAL
+                cardType = SummaryFinanceCardType.TOTAL
             )
         }
     }

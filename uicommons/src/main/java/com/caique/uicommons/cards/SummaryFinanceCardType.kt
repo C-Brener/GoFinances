@@ -1,6 +1,6 @@
 package com.caique.uicommons.cards
 
-enum class FinanceCardType {
+enum class SummaryFinanceCardType {
     INCOME,
     OUTCOME,
     TOTAL
