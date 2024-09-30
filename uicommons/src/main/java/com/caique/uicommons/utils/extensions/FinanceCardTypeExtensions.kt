@@ -2,7 +2,7 @@ package com.caique.uicommons.utils.extensions
 
 import androidx.compose.ui.graphics.Color
 import com.caique.uicommons.R
-import com.caique.uicommons.cards.SummaryFinanceCardType
+import com.caique.uicommons.cards.summary.SummaryFinanceCardType
 import com.caique.uicommons.theme.green
 import com.caique.uicommons.theme.heading
 import com.caique.uicommons.theme.orange

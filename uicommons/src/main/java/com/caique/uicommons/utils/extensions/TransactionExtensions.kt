@@ -1,7 +1,8 @@
-package com.caique.uicommons.buttons.transaction
+package com.caique.uicommons.utils.extensions
 
 import androidx.compose.ui.graphics.Color
 import com.caique.uicommons.R
+import com.caique.uicommons.buttons.transaction.TransactionType
 import com.caique.uicommons.theme.background
 import com.caique.uicommons.theme.green_with_opacity_10
 import com.caique.uicommons.theme.red_with_opacity_10

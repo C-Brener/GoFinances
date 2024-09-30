@@ -28,6 +28,9 @@ import com.caique.uicommons.theme.red
 import com.caique.uicommons.theme.space_six
 import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.space_thirty_six
+import com.caique.uicommons.utils.extensions.getButtonTitle
+import com.caique.uicommons.utils.extensions.getColor
+import com.caique.uicommons.utils.extensions.getIcon
 
 @Composable
 fun TransactionButton(
