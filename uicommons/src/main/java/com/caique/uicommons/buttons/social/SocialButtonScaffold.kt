@@ -30,7 +30,7 @@ import com.caique.uicommons.theme.button_size
 import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.heading
 import com.caique.uicommons.theme.shape
-import com.caique.uicommons.theme.spacing_sixteen
+import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.thin_size
 
 @Composable
@@ -55,7 +55,7 @@ fun SocialButtonScaffold(
     ) {
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
             Icon(
-                modifier = Modifier.padding(spacing_sixteen),
+                modifier = Modifier.padding(space_sixteen),
                 painter = painterResource(id = icon),
                 contentDescription = "Social Icon"
             )
