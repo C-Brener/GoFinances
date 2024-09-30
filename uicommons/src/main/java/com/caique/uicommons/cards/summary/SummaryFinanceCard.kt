@@ -1,4 +1,4 @@
-package com.caique.uicommons.cards
+package com.caique.uicommons.cards.summary
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
