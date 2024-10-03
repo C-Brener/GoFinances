@@ -22,12 +22,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.caique.uicommons.theme.GoFinancesTheme
 import com.caique.uicommons.theme.font_size_title
-import com.caique.uicommons.theme.green
 import com.caique.uicommons.theme.heading
-import com.caique.uicommons.theme.red
 import com.caique.uicommons.theme.space_six
 import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.space_thirty_six
+import com.caique.uicommons.utils.enums.TransactionTypeEnum
+import com.caique.uicommons.utils.extensions.getBackgroundColor
 import com.caique.uicommons.utils.extensions.getButtonTitle
 import com.caique.uicommons.utils.extensions.getColor
 import com.caique.uicommons.utils.extensions.getIcon
@@ -35,13 +35,14 @@ import com.caique.uicommons.utils.extensions.getIcon
 @Composable
 fun TransactionButton(
     modifier: Modifier = Modifier,
-    buttonType: TransactionType,
+    buttonType: TransactionTypeEnum,
     isClicked: Boolean,
     onButtonClicked: () -> Unit
 ) {
     val mutableInteractionSource = remember { MutableInteractionSource() }
     Card(
-        colors = CardDefaults.cardColors().copy(containerColor = getColor(isClicked, buttonType)),
+        colors = CardDefaults.cardColors()
+            .copy(containerColor = buttonType.getBackgroundColor(isClicked)),
         modifier = modifier.clickable(
             interactionSource = mutableInteractionSource,
             indication = null,
@@ -58,9 +59,9 @@ fun TransactionButton(
             horizontalArrangement = Arrangement.Center
         ) {
             Icon(
-                tint = if (buttonType == TransactionType.INCOME) green else red,
+                tint = buttonType.getColor(),
                 modifier = Modifier.padding(vertical = space_sixteen),
-                painter = painterResource(getIcon(buttonType)),
+                painter = painterResource(buttonType.getIcon()),
                 contentDescription = null
             )
             Spacer(Modifier.width(space_six))
@@ -80,19 +81,19 @@ private fun TransactionButtonPreview() {
         Column {
             Row {
                 TransactionButton(
-                    buttonType = TransactionType.INCOME,
+                    buttonType = TransactionTypeEnum.INCOME,
                     isClicked = true,
                     modifier = Modifier.weight(0.5f)
                 ) {
                 }
                 TransactionButton(
-                    buttonType = TransactionType.OUTCOME,
+                    buttonType = TransactionTypeEnum.OUTCOME,
                     isClicked = true,
                     modifier = Modifier.weight(0.5f)
                 ) {
                 }
             }
-            TransactionButton(buttonType = TransactionType.DEFAULT, isClicked = false) {
+            TransactionButton(buttonType = TransactionTypeEnum.DEFAULT, isClicked = false) {
             }
         }
     }
