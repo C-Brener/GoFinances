@@ -24,3 +24,7 @@ val radius_five = 5.dp
 
 // Button Size
 val button_size = 56.dp
+
+// Dropdown
+val drop_down_height = 200.dp
+
