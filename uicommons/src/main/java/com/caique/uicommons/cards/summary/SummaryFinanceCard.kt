@@ -18,7 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.caique.uicommons.theme.GoFinancesTheme
-import com.caique.uicommons.theme.font_size_heading
+import com.caique.uicommons.theme.font_size_heading_1
 import com.caique.uicommons.theme.font_size_text
 import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.space_thirty_two
@@ -61,7 +61,7 @@ fun SummaryFinanceCard(
                 Text(
                     text = financialValue,
                     textAlign = TextAlign.Center,
-                    fontSize = font_size_heading,
+                    fontSize = font_size_heading_1,
                     fontWeight = FontWeight.Medium,
                     color = appearance.textColor
                 )

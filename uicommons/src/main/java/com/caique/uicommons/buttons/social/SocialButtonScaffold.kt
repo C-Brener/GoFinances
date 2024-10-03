@@ -25,10 +25,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.caique.uicommons.R
 import com.caique.uicommons.theme.GoFinancesTheme
 import com.caique.uicommons.theme.background
-import com.caique.uicommons.theme.button_radius
 import com.caique.uicommons.theme.button_size
 import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.heading
+import com.caique.uicommons.theme.radius_five
 import com.caique.uicommons.theme.shape
 import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.thin_size
@@ -51,7 +51,7 @@ fun SocialButtonScaffold(
                 indication = null,
                 onClick = onClick
             ),
-        shape = RoundedCornerShape(button_radius)
+        shape = RoundedCornerShape(radius_five)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
             Icon(
