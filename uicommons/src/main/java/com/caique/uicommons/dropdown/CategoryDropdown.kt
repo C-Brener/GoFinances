@@ -5,7 +5,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -25,7 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.caique.uicommons.R
 import com.caique.uicommons.theme.GoFinancesTheme
-import com.caique.uicommons.theme.drop_down_height
 import com.caique.uicommons.theme.paragraph
 import com.caique.uicommons.theme.radius_five
 import com.caique.uicommons.theme.shape
@@ -57,9 +55,8 @@ fun CategoryDropdown(
             Text(
                 text = optionSelected,
                 color = paragraph,
-                fontWeight = FontWeight.Medium,
-
-                )
+                fontWeight = FontWeight.Medium
+            )
             Icon(
                 painter = painterResource(R.drawable.ic_chevron_down),
                 contentDescription = "",
@@ -69,7 +66,6 @@ fun CategoryDropdown(
         DropdownMenu(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(drop_down_height)
                 .background(color = shape),
             expanded = expanded,
             onDismissRequest = { expanded = false }
