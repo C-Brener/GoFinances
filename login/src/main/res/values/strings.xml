@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="create_account">Create account</string>
+    <string name="login_options">Log in with\none of the ways below</string>
+    <string name="login_screen_title">Control your finances\nvery simple</string>
+    <string name="content_description_logo">Logo</string>
+</resources>
