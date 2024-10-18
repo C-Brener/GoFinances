@@ -1,0 +1,98 @@
+package com.caique.login
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
+import com.caique.uicommons.buttons.social.GoogleSocialButton
+import com.caique.uicommons.theme.GoFinancesTheme
+import com.caique.uicommons.theme.blue
+import com.caique.uicommons.theme.font_size_heading_1
+import com.caique.uicommons.theme.font_size_title_two
+import com.caique.uicommons.theme.orange
+import com.caique.uicommons.theme.shape
+import com.caique.uicommons.theme.space_forty
+import com.caique.uicommons.theme.space_sixteen
+import com.caique.uicommons.theme.space_thirty_two
+
+@Composable
+fun LoginScreenLayout(
+    googleOnClick: () -> Unit,
+    createAccountButton: () -> Unit
+) {
+    val buttonInteractionSource = remember { MutableInteractionSource() }
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = blue)
+    ) {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(space_forty),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Icon(
+                painter = painterResource(R.drawable.logo_go_finances),
+                contentDescription = stringResource(R.string.content_description_logo),
+                tint = orange
+            )
+            Text(
+                text = stringResource(R.string.login_screen_title),
+                color = shape,
+                fontSize = font_size_heading_1,
+                textAlign = TextAlign.Center
+            )
+        }
+        Spacer(Modifier.height(space_forty))
+        Text(
+            text = stringResource(R.string.login_options),
+            color = shape,
+            fontSize = font_size_title_two,
+            textAlign = TextAlign.Center
+        )
+        Spacer(Modifier.height(space_forty))
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(space_sixteen),
+            modifier = Modifier.padding(horizontal = space_thirty_two)
+        ) {
+            GoogleSocialButton(onClick = googleOnClick)
+            Text(
+                text = stringResource(R.string.create_account),
+                textDecoration = TextDecoration.Underline,
+                color = shape,
+                modifier = Modifier.clickable(
+                    interactionSource = buttonInteractionSource,
+                    indication = null,
+                    onClick = createAccountButton
+                )
+            )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun LoginScreenLayoutPreview() {
+    GoFinancesTheme {
+        LoginScreenLayout({}) {
+        }
+    }
+}
