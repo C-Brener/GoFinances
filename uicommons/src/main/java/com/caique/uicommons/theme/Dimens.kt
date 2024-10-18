@@ -5,11 +5,13 @@ import androidx.compose.ui.unit.sp
 
 // Font Size
 val font_size_title = 14.sp
+val font_size_title_two = 16.sp
 val font_size_text = 12.sp
 val font_size_heading_1 = 32.sp
 val font_size_heading_2 = 20.sp
 
 // Spacing
+val space_forty = 40.dp
 val space_thirty_six = 36.dp
 val space_thirty_two = 32.dp
 val space_twenty_four = 24.dp
