@@ -4,4 +4,5 @@
     <string name="login_options">Log in with\none of the ways below</string>
     <string name="login_screen_title">Control your finances\nvery simple</string>
     <string name="content_description_logo">Logo</string>
+    <string name="sign_up_title">Sign up\nto get started</string>
 </resources>

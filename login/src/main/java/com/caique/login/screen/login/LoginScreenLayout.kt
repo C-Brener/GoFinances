@@ -1,6 +1,5 @@
-package com.caique.login
+package com.caique.login.screen.login
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,11 +15,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import com.caique.login.R
+import com.caique.login.components.BackgroundLayer
 import com.caique.uicommons.buttons.social.EmailLoginButton
 import com.caique.uicommons.buttons.social.GoogleSocialButton
 import com.caique.uicommons.text.ClickableText
 import com.caique.uicommons.theme.GoFinancesTheme
-import com.caique.uicommons.theme.blue
 import com.caique.uicommons.theme.font_size_heading_1
 import com.caique.uicommons.theme.font_size_title_two
 import com.caique.uicommons.theme.orange
@@ -35,12 +35,22 @@ internal fun LoginScreenLayout(
     loginWithEmailClick: () -> Unit,
     createAccountButton: () -> Unit
 ) {
+    BackgroundLayer {
+        LoginContent(googleOnClick, loginWithEmailClick, createAccountButton)
+    }
+}
+
+@Composable
+private fun LoginContent(
+    googleOnClick: () -> Unit,
+    loginWithEmailClick: () -> Unit,
+    createAccountButton: () -> Unit
+) {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(color = blue)
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(space_forty),

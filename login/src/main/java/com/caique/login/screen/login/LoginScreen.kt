@@ -1,4 +1,4 @@
-package com.caique.login
+package com.caique.login.screen.login
 
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
