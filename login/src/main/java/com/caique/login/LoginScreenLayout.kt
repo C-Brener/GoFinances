@@ -1,8 +1,6 @@
 package com.caique.login
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,15 +10,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
+import com.caique.uicommons.buttons.social.EmailLoginButton
 import com.caique.uicommons.buttons.social.GoogleSocialButton
+import com.caique.uicommons.text.ClickableText
 import com.caique.uicommons.theme.GoFinancesTheme
 import com.caique.uicommons.theme.blue
 import com.caique.uicommons.theme.font_size_heading_1
@@ -32,11 +30,11 @@ import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.space_thirty_two
 
 @Composable
-fun LoginScreenLayout(
+internal fun LoginScreenLayout(
     googleOnClick: () -> Unit,
+    loginWithEmailClick: () -> Unit,
     createAccountButton: () -> Unit
 ) {
-    val buttonInteractionSource = remember { MutableInteractionSource() }
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -74,16 +72,8 @@ fun LoginScreenLayout(
             modifier = Modifier.padding(horizontal = space_thirty_two)
         ) {
             GoogleSocialButton(onClick = googleOnClick)
-            Text(
-                text = stringResource(R.string.create_account),
-                textDecoration = TextDecoration.Underline,
-                color = shape,
-                modifier = Modifier.clickable(
-                    interactionSource = buttonInteractionSource,
-                    indication = null,
-                    onClick = createAccountButton
-                )
-            )
+            EmailLoginButton(onClick = loginWithEmailClick)
+            ClickableText(stringResource(R.string.create_account), createAccountButton)
         }
     }
 }
@@ -92,7 +82,7 @@ fun LoginScreenLayout(
 @Composable
 private fun LoginScreenLayoutPreview() {
     GoFinancesTheme {
-        LoginScreenLayout({}) {
+        LoginScreenLayout({}, {}) {
         }
     }
 }
