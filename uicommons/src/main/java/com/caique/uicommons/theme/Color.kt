@@ -12,3 +12,4 @@ val heading = Color(0xFF363F5F)
 val paragraph = Color(0xFF969CB2)
 val background = Color(0xFFF0F2F5)
 val shape = Color(0xFFFFFFFF)
+val transparent = Color.Transparent
