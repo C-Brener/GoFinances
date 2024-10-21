@@ -3,7 +3,6 @@ package com.caique.uicommons.textfield
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
@@ -23,7 +22,6 @@ import com.caique.uicommons.theme.background
 import com.caique.uicommons.theme.paragraph
 import com.caique.uicommons.theme.shape
 import com.caique.uicommons.theme.space_eight
-import com.caique.uicommons.theme.space_sixteen
 import com.caique.uicommons.theme.transparent
 
 @Composable
@@ -37,14 +35,11 @@ fun InputField(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(space_sixteen)
-
     ) {
         textFieldLabel?.let {
             Text(
                 text = it,
-                color = shape,
-                modifier = Modifier.padding(bottom = space_eight)
+                color = shape
             )
         }
         Card(
@@ -65,7 +60,6 @@ fun InputField(
                 placeholder = { Text(text = placeholderText, color = paragraph) },
                 modifier = Modifier
                     .fillMaxWidth()
-
             )
         }
     }
@@ -73,7 +67,6 @@ fun InputField(
 
 private fun visualTransformation(isPassword: Boolean) = if (isPassword) {
     PasswordVisualTransformation()
-
 } else {
     VisualTransformation.None
 }
