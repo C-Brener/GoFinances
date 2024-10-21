@@ -5,4 +5,13 @@
     <string name="login_screen_title">Control your finances\nvery simple</string>
     <string name="content_description_logo">Logo</string>
     <string name="sign_up_title">Sign up\nto get started</string>
+    <string name="input_title_name">Name:</string>
+    <string name="input_name_hint">Type your complete name</string>
+    <string name="input_title_email">E-mail:</string>
+    <string name="input_email_hint">Type your email</string>
+    <string name="input_title_password">Password:</string>
+    <string name="input_password_hint">Enter your password</string>
+    <string name="input_title_re_enter_password">Confirm your password:</string>
+    <string name="input_re_enter_password_hint">Re-enter your password</string>
+    <string name="finish_registration_title_button">Finish Registration</string>
 </resources>
