@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 val orange = Color(0xFFFF872C)
 val blue = Color(0xFF5636D3)
+val blue_secondary = Color(0xFFB5A3E0)
 val green = Color(0xFF12A454)
 val green_with_opacity_10 = Color(0x2012A454)
 val red = Color(0xFFE83F5B)

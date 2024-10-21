@@ -13,6 +13,7 @@ val font_size_heading_3 = 24.sp
 val font_size_heading_4 = 20.sp
 
 // Spacing
+val space_sixty_four = 64.dp
 val space_forty = 40.dp
 val space_thirty_six = 36.dp
 val space_thirty_two = 32.dp
