@@ -16,7 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.caique.uicommons.theme.GoFinancesTheme
-import com.caique.uicommons.theme.font_size_heading_2
+import com.caique.uicommons.theme.font_size_heading_4
 import com.caique.uicommons.theme.font_size_title
 import com.caique.uicommons.theme.heading
 import com.caique.uicommons.theme.paragraph
@@ -51,7 +51,7 @@ fun TransactionCard(modifier: Modifier = Modifier, transactionInfo: TransactionI
             )
             Text(
                 transactionInfo.transactionValue,
-                fontSize = font_size_heading_2,
+                fontSize = font_size_heading_4,
                 color = transactionInfo.transactionTypeEnum.getColor()
             )
             Row(

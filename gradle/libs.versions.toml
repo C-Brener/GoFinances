@@ -33,3 +33,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ktlint-kotlin-android = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 kover-kotlin = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+android-library = { id = "com.android.library", version.ref = "agp" }

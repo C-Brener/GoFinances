@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "GoFinances"
 include(":app")
 include(":uicommons")
+include(":login")

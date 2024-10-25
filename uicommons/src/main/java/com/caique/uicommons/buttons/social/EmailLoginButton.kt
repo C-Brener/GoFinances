@@ -6,17 +6,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.caique.uicommons.R
 
 @Composable
-fun AppleSocialButton(onClick: () -> Unit) {
+fun EmailLoginButton(onClick: () -> Unit) {
     SocialButtonScaffold(
-        title = stringResource(R.string.apple_button_title),
-        icon = R.drawable.apple_logo,
+        title = stringResource(R.string.email_button_title),
+        icon = R.drawable.email_icon,
         onClick = onClick
     )
 }
 
 @Preview
 @Composable
-private fun AppleSocialButtonPreview() {
-    AppleSocialButton {
+private fun EmailLoginButtonPreview() {
+    EmailLoginButton {
     }
 }
