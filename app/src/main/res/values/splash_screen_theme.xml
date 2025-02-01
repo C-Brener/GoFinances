@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.SplashScreenGoFinances" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#5636D3</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_logo_go_finance</item>
+        <item name="postSplashScreenTheme">@style/Theme.GoFinances</item>
+    </style>
+</resources>

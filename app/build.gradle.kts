@@ -55,6 +55,7 @@ tasks.getByPath("preBuild").dependsOn("ktlintFormat")
 dependencies {
     implementation(project(":uicommons"))
 
+    implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
