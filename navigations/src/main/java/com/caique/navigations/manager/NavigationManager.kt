@@ -10,15 +10,19 @@ class NavigationManager {
 
     suspend fun setup(navHost: NavHostController) {
         commands.collect { command ->
-            if (command?.destination?.isNotEmpty() == true){
+            if (command?.destination?.isNotEmpty() == true) {
                 navHost.navigate(command.destination)
             }
         }
 
     }
 
-//    fun navigate(directions: NavigationCommand){
-//        commands.value = dir
-//    }
+    fun navigate(directions: NavigationCommand) {
+        commands.value = directions
+    }
+
+    fun clean() {
+        commands.value = null
+    }
 }
 
