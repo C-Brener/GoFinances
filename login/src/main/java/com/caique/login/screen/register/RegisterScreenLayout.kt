@@ -30,10 +30,7 @@ import com.caique.uicommons.theme.space_sixty_four
 import com.caique.uicommons.theme.space_twenty_four
 
 @Composable
-fun RegisterScreenLayout(
-    action: RegisterScreenAction,
-    params: RegisterScreenParams
-) {
+fun RegisterScreenLayout(action: RegisterScreenAction, params: RegisterScreenParams) {
     BackgroundLayer {
         Column(
             modifier = Modifier

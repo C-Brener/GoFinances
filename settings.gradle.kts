@@ -23,3 +23,5 @@ rootProject.name = "GoFinances"
 include(":app")
 include(":uicommons")
 include(":login")
+include(":routes")
+include(":navigations")

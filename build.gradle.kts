@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.ktlint.kotlin.android)
     alias(libs.plugins.kover.kotlin) apply false
     alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 }
 
 ktlint {
